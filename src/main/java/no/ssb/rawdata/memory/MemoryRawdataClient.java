@@ -6,7 +6,6 @@ import no.ssb.rawdata.api.RawdataClosedException;
 import no.ssb.rawdata.api.RawdataConsumer;
 import no.ssb.rawdata.api.RawdataCursor;
 import no.ssb.rawdata.api.RawdataMessage;
-import no.ssb.rawdata.api.RawdataMetadataClient;
 import no.ssb.rawdata.api.RawdataNoSuchPositionException;
 
 import java.time.Duration;
@@ -92,8 +91,8 @@ public class MemoryRawdataClient implements RawdataClient {
     }
 
     @Override
-    public RawdataMetadataClient metadata(String topic) {
-        return null;
+    public MemoryRawdataMetadataClient metadata(String topic) {
+        return new MemoryRawdataMetadataClient(topic);
     }
 
     @Override

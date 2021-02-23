@@ -27,7 +27,15 @@ public interface RawdataMetadataClient {
      *
      * @param key   the key of the metadata entry
      * @param value the value of the metadata entry
-     * @return this metadata-client to allow fluent-style.
+     * @return this metadata-client.
      */
     RawdataMetadataClient put(String key, byte[] value);
+
+    /**
+     * Remove the metadata entry associated with the given key.
+     *
+     * @param key the key of the metadata entry to remove
+     * @return this metadata-client.
+     */
+    RawdataMetadataClient remove(String key);
 }

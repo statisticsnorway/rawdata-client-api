@@ -35,4 +35,10 @@ public class MemoryRawdataMetadataClient implements RawdataMetadataClient {
         map.put(key, value);
         return this;
     }
+
+    @Override
+    public MemoryRawdataMetadataClient remove(String key) {
+        map.remove(key);
+        return this;
+    }
 }

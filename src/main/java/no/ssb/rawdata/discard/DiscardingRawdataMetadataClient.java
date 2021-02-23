@@ -32,4 +32,9 @@ public class DiscardingRawdataMetadataClient implements RawdataMetadataClient {
     public DiscardingRawdataMetadataClient put(String key, byte[] value) {
         return this;
     }
+
+    @Override
+    public DiscardingRawdataMetadataClient remove(String key) {
+        return this;
+    }
 }
