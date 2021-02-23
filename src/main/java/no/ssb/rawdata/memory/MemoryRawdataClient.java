@@ -6,6 +6,7 @@ import no.ssb.rawdata.api.RawdataClosedException;
 import no.ssb.rawdata.api.RawdataConsumer;
 import no.ssb.rawdata.api.RawdataCursor;
 import no.ssb.rawdata.api.RawdataMessage;
+import no.ssb.rawdata.api.RawdataMetadataClient;
 import no.ssb.rawdata.api.RawdataNoSuchPositionException;
 
 import java.time.Duration;
@@ -88,6 +89,11 @@ public class MemoryRawdataClient implements RawdataClient {
     @Override
     public boolean isClosed() {
         return closed.get();
+    }
+
+    @Override
+    public RawdataMetadataClient metadata(String topic) {
+        return null;
     }
 
     @Override
