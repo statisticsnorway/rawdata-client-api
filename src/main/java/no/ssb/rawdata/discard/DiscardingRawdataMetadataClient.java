@@ -3,6 +3,7 @@ package no.ssb.rawdata.discard;
 import no.ssb.rawdata.api.RawdataMetadataClient;
 
 import java.util.Collections;
+import java.util.Set;
 
 public class DiscardingRawdataMetadataClient implements RawdataMetadataClient {
 
@@ -18,8 +19,8 @@ public class DiscardingRawdataMetadataClient implements RawdataMetadataClient {
     }
 
     @Override
-    public Iterable<String> keys() {
-        return Collections.emptyList();
+    public Set<String> keys() {
+        return Collections.emptySet();
     }
 
     @Override

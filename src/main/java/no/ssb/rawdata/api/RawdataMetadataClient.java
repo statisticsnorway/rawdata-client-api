@@ -1,5 +1,7 @@
 package no.ssb.rawdata.api;
 
+import java.util.Set;
+
 public interface RawdataMetadataClient {
 
     /**
@@ -10,7 +12,7 @@ public interface RawdataMetadataClient {
     /**
      * @return an iterable with the keys of all the metadata entries stored for this topic.
      */
-    Iterable<String> keys();
+    Set<String> keys();
 
     /**
      * Read value for a given key.

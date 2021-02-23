@@ -3,6 +3,7 @@ package no.ssb.rawdata.memory;
 import no.ssb.rawdata.api.RawdataMetadataClient;
 
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class MemoryRawdataMetadataClient implements RawdataMetadataClient {
@@ -20,7 +21,7 @@ public class MemoryRawdataMetadataClient implements RawdataMetadataClient {
     }
 
     @Override
-    public Iterable<String> keys() {
+    public Set<String> keys() {
         return map.keySet();
     }
 
